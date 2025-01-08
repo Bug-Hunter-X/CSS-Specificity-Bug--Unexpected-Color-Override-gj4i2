@@ -1,0 +1,19 @@
+There are several ways to solve this issue, depending on the desired outcome.  Here are two solutions:
+
+**Solution 1: Adjust the selector order:**
+
+```css
+.red { color: red; }
+div.red { color: green; }
+div { color: blue; }
+```
+By placing the more specific selector before the less specific one, the desired styling precedence is established. If you want the .red to override the div.red, put .red before div.red
+
+**Solution 2: Use !important (generally discouraged):**
+
+```css
+div { color: blue; }
+.red { color: red !important; }
+div.red { color: green; }
+```
+Adding `!important` to the `.red` declaration forces its color to take precedence.  However, overuse of `!important` can make CSS difficult to maintain, so this should be a last resort.

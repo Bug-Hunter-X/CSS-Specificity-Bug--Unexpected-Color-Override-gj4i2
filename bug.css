@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates a common issue where specificity can cause unexpected results: 
+
+```css
+div { color: blue; }
+.red { color: red; }
+div.red { color: green; }
+```
+
+In this case, a `<div>` element with the class `red` will be green.  The `div.red` selector is more specific than `.red`, so its declaration takes precedence.
